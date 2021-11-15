@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Components from './Profile/Components';
 
 function App() {
+  const StyleObject = {color:"red" , textAlign:"center"}
+  const FullName='khalil bouzayeni'
+  const Bio='from tunsia'
+  const Profession='student'
+  const PropsFunction =()=> {
+    alert('welcome khalil')
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div Style={StyleObject}>
+    <Components  Name={FullName}  Bt={Bio} Job={Profession} alertFct={PropsFunction}>
+      <h1>image</h1>
+    </Components>
     </div>
   );
 }
